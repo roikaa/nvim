@@ -20,12 +20,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
---  install = { colorscheme = { "habamax" } },
---  -- automatically check for plugin updates
---  checker = { enabled = true },
- require 'plugins.gruvbox',
- require 'plugins.telescope',
- require 'plugins.alpha',
- require 'plugins.treesitter', 
-
+  require 'plugins.gruvbox',
+  require 'plugins.telescope',
+  require 'plugins.alpha',
+  require 'plugins.treesitter',
+  require 'plugins.bufferline',
 })
