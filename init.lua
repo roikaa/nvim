@@ -1,5 +1,6 @@
 require("core.options") -- Load general options
 require("core.keymaps") -- Load general keymaps
+require("core.snippets") -- Load snippets
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -28,9 +29,9 @@ require("lazy").setup({
 	require("plugins.comment"),
 	require("plugins.neotree"),
 	require("plugins.lualine"),
-	-- require("plugins.lsp"),
-	-- require("plugins.none-ls"),
-	-- require 'plugins.gitsigns',
+	require("plugins.lsp"),
+	require("plugins.none-ls"),
+	require("plugins.gitsigns"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 })
