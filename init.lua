@@ -26,4 +26,5 @@ require("lazy").setup({
   require 'plugins.treesitter',
   require 'plugins.bufferline',
   require 'plugins.autocompletion',
+  require 'plugins.comment',
 })

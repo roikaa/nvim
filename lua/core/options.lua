@@ -6,7 +6,7 @@ vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. (defaul
 vim.o.wrap = false -- Display lines as one long line (default: true)
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)
 
-vim.o.mouse = '' -- Mouse options (default: 'a')
+vim.o.mouse = 'a' -- Mouse options (default: 'a')
 
 vim.o.autoindent = true -- Copy indent from current line when starting new one (default: true)
 
