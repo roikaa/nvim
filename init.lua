@@ -29,7 +29,7 @@ require("lazy").setup({
 	require("plugins.neotree"),
 	require("plugins.lualine"),
 	-- require("plugins.lsp"),
-	require("plugins.none-ls"),
+	-- require("plugins.none-ls"),
 	-- require 'plugins.gitsigns',
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
