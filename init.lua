@@ -27,7 +27,7 @@ require("lazy").setup({
   require 'plugins.bufferline',
   require 'plugins.autocompletion',
   require 'plugins.comment',
-  -- require 'plugins.neotree',
+  require 'plugins.neotree',
   -- require 'plugins.lualine',
   -- require 'plugins.lsp',
   -- require 'plugins.none-ls',
