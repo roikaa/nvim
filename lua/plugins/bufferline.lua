@@ -6,6 +6,7 @@ return {
   },
   config = function()
     require('bufferline').setup {
+      			-- highlights = require("catppuccin.groups.integrations.bufferline").get(),
       options = {
         mode = 'buffers', -- set to "tabs" to only show tabpages instead
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
@@ -43,20 +44,20 @@ return {
         maximum_length = 15,
         sort_by = 'insert_at_end',
       },
-      highlights = {
-        separator = {
-          fg = '#434C5E',
-        },
-        buffer_selected = {
-          bold = true,
-          italic = false,
-        },
-        -- separator_selected = {},
-        -- tab_selected = {},
-        -- background = {},
-        -- indicator_selected = {},
-        -- fill = {},
-      },
+      --  highlights = {
+      --    separator = {
+      --      fg = '#434C5E',
+      --    },
+      --   buffer_selected = {
+      --     bold = true,
+      --     italic = false,
+      --   },
+      --   -- separator_selected = {},
+      --   -- tab_selected = {},
+      --   -- background = {},
+      --   -- indicator_selected = {},
+      --   -- fill = {},
+      -- },
     }
   end,
 }
