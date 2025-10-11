@@ -85,3 +85,5 @@ vim.opt.cmdheight = 0 -- Hide commandline when not in use
 --     -- Literally the same but left
 --     precedes = '⟨'
 -- }
+--
+vim.opt.fillchars:append(",eob: ") -- Gets rid of the icky `~` filling the number column at the end of the file
