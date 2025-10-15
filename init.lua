@@ -34,7 +34,8 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
-	require("plugins.tmux-session"),
-	require("ftplugins.ftdetect"),
-	require("ftplugins.tex"),
 })
+
+-- require("plugins.tmux-session")
+require("ftplugins.ftdetect")
+require("ftplugins.tex")
