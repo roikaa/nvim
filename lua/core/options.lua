@@ -70,7 +70,7 @@ vim.opt.background = "dark"
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99 -- how many folds are we willing to do within a fold before we just stop folding
-vim.opt.cmdheight = 0 -- Hide commandline when not in use
+vim.opt.cmdheight = 2 -- Hide commandline when not in use
 -- vim.opt.listchars      = {
 --     -- Replace tab whitespace with -->
 --     tab = '-->',
