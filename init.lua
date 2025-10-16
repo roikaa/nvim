@@ -37,5 +37,5 @@ require("lazy").setup({
 })
 
 -- require("plugins.tmux-session")
-require("ftplugins.ftdetect")
+require("ftdetect.filetype")
 require("ftplugins.tex")
