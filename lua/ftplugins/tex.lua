@@ -4,6 +4,7 @@
 require("compiler.tex")
 local function compile()
 	-- Change to file directory and run make
+	vim.cmd("w")
 	vim.cmd("cd %:p:h")
 	vim.cmd("silent make")
 	vim.cmd("cd -")
@@ -51,8 +52,8 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = setup_keymaps,
 })
 
--- Autocommand to compile on save
-vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = "*.tex",
-	callback = compile,
-})
+-- -- Autocommand to compile on save
+-- vim.api.nvim_create_autocmd("BufWritePost", {
+-- 	pattern = "*.tex",
+-- 	callback = compile,
+-- })
