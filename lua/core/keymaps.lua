@@ -2,6 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "."
 
+-- vim.keymap.set("n", "<leader>cj", ":cc<CR>", { noremap = true, silent = true, desc = "Jump to current error" })
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
@@ -69,11 +70,11 @@ vim.keymap.set("n", "]d", function()
 	vim.diagnostic.jump({ count = 1, float = true })
 end, { desc = "Go to next diagnostic message" })
 
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+vim.keymap.set("n", "<leader>df", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 
 -- Quick fix keymaps
-vim.keymap.set("n", "<leader>c", function()
+vim.keymap.set("n", "<leader>q", function()
 	if vim.fn.getqflist({ winid = 0 }).winid == 0 then
 		vim.cmd("copen")
 	else
