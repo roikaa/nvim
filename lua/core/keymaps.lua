@@ -1,6 +1,6 @@
 -- Set leader key
 vim.g.mapleader = " "
-vim.g.maplocalleader = "."
+vim.g.maplocalleader = ","
 
 -- vim.keymap.set("n", "<leader>cj", ":cc<CR>", { noremap = true, silent = true, desc = "Jump to current error" })
 -- Disable the spacebar key's default behavior in Normal and Visual modes
