@@ -20,7 +20,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.gruvbox"),
+	-- require("plugins.gruvbox"),
 	require("plugins.telescope"),
 	require("plugins.alpha"),
 	require("plugins.treesitter"),
@@ -35,7 +35,12 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 })
-
+local use_stylix = os.getenv("STYLIX_ENABLED") == "1"
+if use_stylix then
+	require("plugins.stylix")
+else
+	require("plugins.gruvbox")
+end
 -- require("plugins.tmux-session")
 require("ftdetect.filetype")
 require("ftplugins.tex")
