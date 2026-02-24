@@ -34,7 +34,7 @@ return {
       'diff',
       colored = false,
       symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
-      cond = hide_in_width,
+      iond = hide_in_width,
     }
 
     require('lualine').setup {
