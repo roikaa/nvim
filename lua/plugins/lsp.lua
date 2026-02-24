@@ -200,7 +200,7 @@ return {
 		local hostname = vim.fn.hostname()
 		local username = os.getenv("USER")
 
-		require("lspconfig").nixd.setup({
+		vim.lsp.config("nixd", {
 			settings = {
 				nixd = {
 					nixpkgs = {
@@ -226,5 +226,6 @@ return {
 				},
 			},
 		})
+		vim.lsp.enable("nixd")
 	end,
 }
