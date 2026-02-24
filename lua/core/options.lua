@@ -70,20 +70,20 @@ vim.opt.background = "dark"
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 99 -- how many folds are we willing to do within a fold before we just stop folding
-vim.opt.cmdheight = 0 -- Hide commandline when not in use
--- vim.opt.listchars      = {
+vim.opt.cmdheight = 2 -- Hide commandline when not in use (0)
+vim.opt.listchars      = {
 --     -- Replace tab whitespace with -->
---     tab = '-->',
---     -- I don't care about spaces so spaces are just plain old whitespace
---     multispace = ' ',
---     -- nbsp=' ',
---     -- If a line ends with a space, I probably do care about that, show this instead of whitespace
---     trail = '',
+    tab = '-->',
+    -- I don't care about spaces so spaces are just plain old whitespace
+    multispace = ' ',
+    -- nbsp=' ',
+    -- If a line ends with a space, I probably do care about that, show this instead of whitespace
+    trail = '',
 --     -- If the line goes off the screen (for some reason), show this as the last character of the line so I know the
 --     -- line continues to the right
 --     extends = '⟩',
 --     -- Literally the same but left
 --     precedes = '⟨'
--- }
+}
 --
 vim.opt.fillchars:append(",eob: ") -- Gets rid of the icky `~` filling the number column at the end of the file
