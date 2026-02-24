@@ -20,7 +20,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("plugins.gruvbox"),
+	-- require("plugins.gruvbox-material"),
 	require("plugins.telescope"),
 	require("plugins.alpha"),
 	require("plugins.treesitter"),
