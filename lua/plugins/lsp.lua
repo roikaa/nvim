@@ -130,12 +130,7 @@ return {
 		-- - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		-- - settings (table): Override the default settings passed when initializing the server.
 		local servers = {
-			nixd = {
-				-- formatting = { command = { "nixpkgs-fmt" } },
-				-- options = {
-					-- nix_path = vim.fn.getenv("NIX_PATH"),
-				-- },
-			},
+			nil_ls={},
 			ts_ls = {},
 			ruff = {},
 			pylsp = {
