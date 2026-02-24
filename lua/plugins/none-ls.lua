@@ -8,7 +8,17 @@ return {
 		local null_ls = require("null-ls")
 		local formatting = null_ls.builtins.formatting -- to setup formatters
 		local diagnostics = null_ls.builtins.diagnostics -- to setup linters
-
+		-- Custom alejandra formatter for none-ls
+		local alejandra = {
+			name = "alejandra",
+			method = null_ls.methods.FORMATTING,
+			filetypes = { "nix" },
+			generator = null_ls.generator({
+				command = "alejandra",
+				args = { "-" },
+				to_stdin = true,
+			}),
+		}
 		-- Formatters & linters for mason to install
 		require("mason-null-ls").setup({
 			ensure_installed = {
@@ -30,6 +40,7 @@ return {
 			formatting.terraform_fmt,
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
 			require("none-ls.formatting.ruff_format"),
+			alejandra
 		}
 
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
