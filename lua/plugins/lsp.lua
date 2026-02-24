@@ -130,12 +130,6 @@ return {
 		-- - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		-- - settings (table): Override the default settings passed when initializing the server.
 		local servers = {
-			-- nixd = {
-				-- formatting = { command = { "nixpkgs-fmt" } },
-				-- options = {
-					-- nix_path = vim.fn.getenv("NIX_PATH"),
-				-- },
-			-- },
 			ts_ls = {},
 			ruff = {},
 			pylsp = {
@@ -202,5 +196,35 @@ return {
 			vim.lsp.config(server, cfg)
 			vim.lsp.enable(server)
 		end
+
+		local hostname = vim.fn.hostname()
+		local username = os.getenv("USER")
+
+		require("lspconfig").nixd.setup({
+			settings = {
+				nixd = {
+					nixpkgs = {
+						expr = "import (builtins.getFlake(toString ./.)).inputs.nixpkgs {}",
+					},
+					formatting = {
+						command = { "alejandra" },
+					},
+					options = {
+						nixos = {
+							expr = "let flake = builtins.getFlake(toString ./.); in flake.nixosConfigurations."
+								.. hostname
+								.. ".options",
+						},
+						home_manager = {
+							expr = 'let flake = builtins.getFlake(toString ./.); in flake.homeConfigurations."'
+								.. username
+								.. "@"
+								.. hostname
+								.. '".options',
+						},
+					},
+				},
+			},
+		})
 	end,
 }
