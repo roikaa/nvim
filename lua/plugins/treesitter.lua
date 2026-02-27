@@ -5,6 +5,8 @@ return {
 		main = "nvim-treesitter.configs",
 		opts = {
 			ensure_installed = {
+				"cpp",
+				"arduino",
 				"nix",
 				"latex",
 				"lua",

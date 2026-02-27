@@ -34,6 +34,7 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
+	require("plugins.arduino")
 })
 -- require("plugins.tmux-session")
 require("ftdetect.filetype")
