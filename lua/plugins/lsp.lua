@@ -130,6 +130,7 @@ return {
 		-- - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		-- - settings (table): Override the default settings passed when initializing the server.
 		local servers = {
+			arduino-language-server = {},  -- Arduino LSP
 			clangd = {}, -- handles C++ LSP + formatting
 			ts_ls = {},
 			ruff = {},
