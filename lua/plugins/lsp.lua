@@ -130,7 +130,6 @@ return {
 		-- - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
 		-- - settings (table): Override the default settings passed when initializing the server.
 		local servers = {
-			arduino-language-server = {},  -- Arduino LSP
 			clangd = {}, -- handles C++ LSP + formatting
 			ts_ls = {},
 			ruff = {},
@@ -178,6 +177,18 @@ return {
 						},
 					},
 				},
+			},
+			arduino_language_server = {
+				cmd = {
+					"arduino-language-server",
+					"-cli-config",
+					vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
+					"-fqbn",
+					"arduino:avr:uno", -- Your Uno board
+					"-clangd",
+					"clangd", -- Installed via Mason/Nix
+				},
+				filetypes = { "arduino", "cpp" },
 			},
 		}
 
