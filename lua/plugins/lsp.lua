@@ -178,18 +178,6 @@ return {
 					},
 				},
 			},
-			arduino_language_server = {
-				cmd = {
-					"arduino-language-server",
-					"-cli-config",
-					vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
-					"-fqbn",
-					"arduino:avr:uno", -- Your Uno board
-					"-clangd",
-					"clangd", -- Installed via Mason/Nix
-				},
-				filetypes = { "arduino", "cpp" },
-			},
 		}
 
 		-- Ensure the servers and tools above are installed
